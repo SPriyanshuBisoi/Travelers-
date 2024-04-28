@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="./files/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+</head>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #191919;
+}
+
+main {
+  padding: 20px;
+}
+
+.search-section {
+  margin: 100px auto 0;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex; /* Make the form elements inline */
+  justify-content: center; /* Center the elements horizontally */
+  width: fit-content;
+  flex-direction: column;
+}
+
+.search-section h2 {  /* Changed from h1 for better balance */
+  font-size: 55px;
+  margin-bottom: 50px;
+  color: #9e1212;
+}
+
+.search-section input[type="text"],
+.search-section input[type="date"] {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background-color: #f5f5f5; /* Light gray background */
+  margin-right: 0;
+  margin-bottom: 20px; /* Add margin-bottom for spacing */
+  transition: ease 0.30s;
+}
+
+.search-section input:hover {
+  transform: scale(1.05); /* Subtle scale on hover */
+  border: 1px solid #388e3c; /* Primary color border */
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+.search-section button {
+  background-color: #388e3c; /* Green color */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  transition: ease 0.30s;
+}
+
+.search-section button:hover {
+  background-color: #235626;
+  transform: scale(1.05); /* Subtle scale on hover */
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+.results-section {
+  margin: 80px auto 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: #3d9dac;
+  
+}
+
+.vehicle-card {
+  width: 200px; /* Increase card width for better content visibility */
+  border: 1px solid #ddd; /* Lighter border color */
+  border-radius: 5px;
+  margin: 20px auto;
+  background-color: #f5f5f5; /* Light gray background */
+  text-align: center;
+  padding: 15px; /* Slightly more padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap; /* Wrap vehicle cards to fit available space */
+  justify-content: space-between; /* Horizontally align cards with spacing */
+   
+}
+
+.vehicle-card img {
+  width: 100%;
+  height: 150px; /* Set a fixed height for consistent card appearance */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add space between image and content */
+}
+
+.vehicle-card h3 {
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 5px;
+  font-size: 18px; /* Increase heading size */
+  color: #333; /* Darker text color */
+}
+
+.vehicle-card p {
+  margin-bottom: 10px;
+  color: #666; /* Lighter text color for description */
+}
+
+.vehicle-card button {
+  background-color: #388e3c; /* Green color */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Hover effect */
+}
+
+.vehicle-card button:hover {
+  background-color: #bb2944; /* Darken green on hover */
+}
+.vehicle-card:hover{
+  transform: translateX(3px);
+    box-shadow: 5px 20px 50px #3d9dac;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="vehicle" id="home"> 
+    <nav>
+        <img src="./files/logo.png" class="logo" alt="Logo" title="Travels">
+        
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Home</a>
+                <a href="./locations.html">Locations</a>
+                <a href="./package.html">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>    
+</div>
+
+  <div class="vehicle" id="home">
+    </div>
+
+  <main>
+    <section class="search-section">
+      <h2>Find Your Ride</h2>
+      <form action="#" method="GET">
+        <input type="text" name="location" placeholder="Enter Pickup Location" required>
+        <input type="date" name="pickup-date" required>
+        <input type="date" name="return-date" required>
+        <div>
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </section>
+    <section class="results-section">
+      <h2>Search Results</h2>
+      <div class="vehicle-card">
+        <img src="./files/bike.jpg" alt="Bike Image">
+        <h3>Bikes</h3>
+        <p>Price: Rs. 500 - Rs. 1000/day</p>
+        <a href="https://www.royalbrothers.com/" class="button">Select</a>
+      </div>
+      <div class="vehicle-card">
+        <img src="./files/car.jpg" alt="Car Image">
+        <h3>Cars</h3>
+        <p>Price: Rs. 1500 - Rs. 3000/day</p>  
+        <a href="https://www.hertz.com/rentacar/reservation/" class="button">Select</a>
+      </div>
+      <div class="vehicle-card">
+        <img src="./files/bus.jpg" alt="Car Image">
+        <h3>Bus</h3>
+        <p>Price: Starting at Rs. 200 (Actual Bus Ticket)</p>
+        <a href="https://www.redbus.in/" class="button">Select</a>
+      </div>
+     
+  <section class="footer">
+    <div class="foot">
+        <div class="footer-content">
+            
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/s_.priyanshu" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/in/s-priyanshu-9a66a2297/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-wordpress' ></i></a>
+                    <a href="https://github.com/SPriyanshuBisoi" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="end">
+        <p>Copyright © 2024 Tourism 360 : A Holistic Approach to Tourism Renaissance All Rights Reserved.<br>Website developed by: S.Priyanshu</p>
+    </div>
+</section>
+</body>
+</html>

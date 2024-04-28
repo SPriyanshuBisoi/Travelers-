@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food services</title>
+    <link rel="icon" href="./files/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+      
+.register{
+    background-repeat: no-repeat;
+    background-image: url('./files/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(100%);  /* Or any other desired position */
+
+}
+
+
+.registration{
+    padding: 100px 15%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.register-form h1{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+.register-form h1 span{
+    color: #fc0050;
+}
+
+.register-form{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.register-form form input{
+    color: rgb(0, 0, 0);
+    padding: 17px;
+    background-color: #e1e1e1;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+.register-form h4{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #fc0050;
+}
+button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 15px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #1f5222; /* Darker green background on hover */
+}
+
+
+.register-form form .submitbtn{
+  background-color: #fc0050; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.register-form form .submitbtn:hover{
+    border: 2px solid #fc0050;
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body class="register">
+
+    <nav>
+        <img src="./files/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Home</a>
+                <a href="./locations.html">Locations</a>
+                <a href="./package.html">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="registration">
+        <div class="register-form">
+            <h1>Order <span>Please</span></h1>
+            <form action="" onsubmit="return validateform()">
+            <h4>Order gose to : </h4>
+            <input type="text" name="myname1" placeholder="Name" id="name" required>
+            <input type="email" name="myemail" placeholder="Email-Id" id="" required>
+            <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required>
+            <input type="number" name="myage" placeholder="Age" id="" required>
+            <br>
+            <input type="radio" name="mygender" id="" required> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <input type="radio" name="mygender" id=""> Female
+            </br>
+
+
+            <h4>when </h4>
+            <input type="time" name="departuredate" id="" required>
+
+            
+            
+            <h4>availables</h4>
+              <input type="checkbox" name="food" id=""> Samosa &nbsp; &nbsp; &nbsp;<p>
+              <input type="checkbox" name="food" id=""> Idli &nbsp; &nbsp; &nbsp;<p>
+              <input type="checkbox" name="food" id=""> Vada &nbsp; &nbsp; &nbsp;<p>
+              <input type="checkbox" name="food" id=""> Biriyani &nbsp; &nbsp; &nbsp;<p>
+              <input type="checkbox" name="food" id=""> Masala Dosa &nbsp; &nbsp; &nbsp;<p>
+              <input type="checkbox" name="food" id=""> Upma &nbsp; &nbsp; &nbsp;<p>
+              <input type="checkbox" name="food" id=""> Puri &nbsp; &nbsp; &nbsp;<p>
+              <input type="checkbox" name="food" id=""> Uttapam &nbsp; &nbsp; &nbsp;<p>
+              
+            <br> <br>
+            <h4>resturant</h4>
+            <input type="radio" name="locations" id="loc1" required> FastFood &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1"> Fast Casual &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1"> Casual Dining &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1"> Fine Dining &nbsp; &nbsp; &nbsp;
+            <br> <br> 
+            <button onclick="getLocation()">Get My Live Location</button>
+            <br> <br> 
+            <input type="checkbox" name="t&c" id="" checked required>  I accept the Terms & Conditions.
+            <br> <br>
+            <input type="submit" value="Submit" class="submitbtn">
+
+
+        </form>
+        </div>
+    </section>
+
+<!-- Footer -->
+
+<section class="footer">
+    <div class="foot">
+        <div class="footer-content">
+            
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/s_.priyanshu" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/in/s-priyanshu-9a66a2297/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-wordpress' ></i></a>
+                    <a href="https://github.com/SPriyanshuBisoi" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="end">
+        <p>Copyright © 2024 Tourism 360 : A Holistic Approach to Tourism Renaissance All Rights Reserved.<br>Website developed by: S.Priyanshu</p>
+    </div>
+</section>
+
+<!-- Javascript -->
+<script>
+    function validateform(){ 
+        var tel=document.getElementById("phonenum").value;  
+
+        if(tel.length<10){  
+            alert("Phone number must be of atleast 10 digits!");  
+            return false;  
+        } else if(isNaN(tel)){
+            alert("Phone number should not include character!");
+            return false;
+        }
+        return true;
+}  
+</script>
+<script>
+  function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+          alert("Geolocation is not supported by this browser.");
+      }
+  }
+  
+  function showPosition(position) {
+      alert("Latitude: " + position.coords.latitude + 
+      "\nLongitude: " + position.coords.longitude);
+  }
+  </script>
+  
+
+</body>
+</html>
